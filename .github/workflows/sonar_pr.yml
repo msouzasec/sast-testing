@@ -5,6 +5,7 @@ on:
     types: [opened, edited, reopened, synchronize]
     branches:
       - master
+      - 'teste-sonar-[0-9]'
 
 jobs:
   build:
