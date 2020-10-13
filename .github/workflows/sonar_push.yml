@@ -30,7 +30,7 @@ jobs:
       - if: endsWith(github.REF, '/master') != true
         name: 'Run an analysis of the ${{ github.REF }} branch'
         run: sonar-scanner
-          -Dsonar.host.url=${{ secrets.SONARQUBE_HOST }}
+          -Dsonar.host.url=https://sonarqube.redekasa.com/
           -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }}
           -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
           -Dsonar.branch.name=${GITHUB_REF:11}
