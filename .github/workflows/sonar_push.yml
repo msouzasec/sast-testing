@@ -29,9 +29,6 @@ jobs:
       # Conditional execution can be done, in this case the parameter to use with sonar scanner are different if we are analyzing master or a branch
       - if: endsWith(github.REF, '/master') != true
         name: 'Run an analysis of the ${{ github.REF }} branch'
-        env:
-          # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: sonar-scanner
           -Dsonar.host.url=${{ secrets.SONARQUBE_HOST }}
           -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }}
