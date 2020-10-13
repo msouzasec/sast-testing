@@ -43,7 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: sonar-scanner
           -Dsonar.host.url="https://sonarqube.redekasa.com/"
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-          -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
+          -Dsonar.login=526ca12a82d2c6269d13850d571f54b5ec2e79fc
+          -Dsonar.projectKey=sast-testing3
           -Dsonar.scm.provider=git
           -Dsonar.java.binaries=/tmp
