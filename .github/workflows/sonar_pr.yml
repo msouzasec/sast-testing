@@ -21,6 +21,9 @@ jobs:
           ref: ${{ github.HEAD_REF }}
 
       - name: Retrieve entire repository history
+        env:
+          # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git fetch --prune --unshallow
       - name: Run an analysis of the PR
