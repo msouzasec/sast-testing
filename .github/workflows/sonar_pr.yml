@@ -30,7 +30,7 @@ jobs:
       - name: Run an analysis of the PR
         run: sonar-scanner
           -Dsonar.host.url="https://sonarqube.redekasa.com/"
-          -Dsonar.login=7c9b0bed24f94e205f377e9c7340bde84e77dca7
+          -Dsonar.login=ab217c1391a0edebc3e92cae648613e6723c7671
           -Dsonar.projectKey=sast-testing3
           -Dsonar.pullrequest.key=${{ github.event.number }}
           -Dsonar.pullrequest.branch=${{ github.HEAD_REF }}
